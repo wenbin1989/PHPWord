@@ -46,7 +46,7 @@ class Styles extends AbstractPart
                 if (is_null($name)) {
                     $name = $xmlReader->getAttribute('w:val', $node, 'w:name');
                 }
-                preg_match('/Heading(\d)/', $name, $headingMatches);
+                preg_match('/heading (\d)/', $xmlReader->getAttribute('w:val', $node, 'w:name'), $headingMatches);
                 // $default = ($xmlReader->getAttribute('w:default', $node) == 1);
                 switch ($type) {
 

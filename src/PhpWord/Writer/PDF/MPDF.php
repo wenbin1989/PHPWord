@@ -50,6 +50,8 @@ class MPDF extends AbstractRenderer implements WriterInterface
 
         //  Create PDF
         $pdf = new \mpdf();
+        $pdf->useAdobeCJK = true;
+        $pdf->SetAutoFont(AUTOFONT_ALL);
         $pdf->_setPageSize($paperSize, $orientation);
         $pdf->addPage($orientation);
 

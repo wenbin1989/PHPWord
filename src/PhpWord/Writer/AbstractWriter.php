@@ -247,8 +247,6 @@ abstract class AbstractWriter implements WriterInterface
             // @codeCoverageIgnoreEnd
             @unlink($this->tempFilename);
         }
-
-        $this->clearTempDir();
     }
 
     /**
